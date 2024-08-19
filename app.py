@@ -1,3 +1,12 @@
+import pickle
+from sklearn.linear_model import LogisticRegression  # Example model
+
+# Load the model from a pickle file
+with open('model.pkl', 'rb') as file:
+    model = pickle.load(file)
+
+# Check the type of the loaded model
+print(type(model))
 from flask import Flask,request, url_for, redirect, render_template
 import pickle
 import numpy as np
